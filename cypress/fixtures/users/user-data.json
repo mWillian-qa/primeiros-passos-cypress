@@ -6,5 +6,16 @@
     "userFail": {
       "username": "test",
       "password": "test"
+    },
+    "myInfoData": {
+      "firtnamefield": "Willian",
+      "lastnamefield": "Ferreira",
+      "middlenamefield": "Onofre",
+      "employeeidfield": "qaTester",
+      "otheridfield": "649731",
+      "driverslicensenumber": "12345",
+      "datefield": "2028-03-25",
+      "testfield": "123"
+
     }
 }
