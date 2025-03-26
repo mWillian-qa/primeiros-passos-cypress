@@ -14,8 +14,9 @@
       "employeeidfield": "qaTester",
       "otheridfield": "649731",
       "driverslicensenumber": "12345",
-      "datefield": "2028-03-25",
-      "testfield": "123"
+      "datefield": "1973-06-20",
+      "testfield": 123,
+      "birthdatefield": "1990-04-15"
 
     }
 }
