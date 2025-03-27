@@ -17,7 +17,10 @@ describe('Orange HRM Tests', () => {
     dateField: "[placeholder='yyyy-dd-mm']",
     dateButtonClose: ".--close",
     submitButton: "[type='submit']", 
-    genericKomboField: ".oxd-select-text--active",
+    genericComboBox: ".oxd-select-text--active",
+    selectFirstCombobox: ".oxd-select-dropdown > :nth-child(50)",
+    selectSecondCombobox: ".oxd-select-dropdown > :nth-child(2)",
+    selectThirdCombobox: ".oxd-select-dropdown > :nth-child(6)",
     birthDateField: "[placeholder='yyyy-dd-mm']",
     
   }
@@ -39,17 +42,17 @@ describe('Orange HRM Tests', () => {
     cy.get(selectorsList.genericField).eq(5).clear().type(userData.myInfoData.driverslicensenumber)
     cy.get(selectorsList.dateField).eq(0).clear().type(userData.myInfoData.datefield)
     cy.get(selectorsList.dateButtonClose).click()
-    cy.get(selectorsList.genericKomboField).eq(0).click()
-    cy.get('.oxd-select-dropdown > :nth-child(50)').click()
-    cy.get(selectorsList.genericKomboField).eq(1).click()
-    cy.get('.oxd-select-dropdown > :nth-child(2)').click()
+    cy.get(selectorsList.genericComboBox).eq(0).click({force: true })
+    cy.get(selectorsList.selectFirstCombobox).click()
+    cy.get(selectorsList.genericComboBox).eq(1).click({force: true })
+    cy.get(selectorsList.selectSecondCombobox).click()
     cy.get(selectorsList.birthDateField).eq(1).clear().type(userData.myInfoData.birthdatefield)
     cy.get(selectorsList.dateButtonClose).click()
 
     // espaço pra colocar a escolha do gênero
 
-    cy.get(selectorsList.genericKomboField).eq(2).click()
-    cy.get('.oxd-select-dropdown > :nth-child(6)').click()
+    cy.get(selectorsList.genericComboBox).eq(2).click({force: true })
+    cy.get(selectorsList.selectThirdCombobox).click()
     cy.get(selectorsList.genericField).eq(9).clear().type(userData.myInfoData.testfield)
     cy.get(selectorsList.submitButton).eq(0).click()
     cy.get('body').should('contain', 'Successfully Updated')
