@@ -2,7 +2,7 @@ import userData from '../fixtures/users/user-data.json'
 
 class MyInfoPage {
 
-    selectorsList(){
+    selectorsList() {
         const selectors = {
             myInfoButton: "[href='/web/index.php/pim/viewMyDetails/empNumber/7']",
             firstNameField: "[name='firstName']",
@@ -27,23 +27,23 @@ class MyInfoPage {
 
     fillPersonalDetails(firstnamefield, middlenamefield, lastnamefield, nicknamefield) {
        
-        cy.get(this.selectorsList().firstNameField).clear().type(userData.myInfoData.firstnamefield)
-        cy.get(this.selectorsList().middleNameField).clear().type(userData.myInfoData.middlenamefield)
-        cy.get(this.selectorsList().lastNameField).clear().type(userData.myInfoData.lastnamefield)
-        cy.get(this.selectorsList().genericField).eq(2).clear().type(userData.myInfoData.nicknamefield)
+        cy.get(this.selectorsList().firstNameField).clear().type(firstnamefield)
+        cy.get(this.selectorsList().middleNameField).clear().type(middlenamefield)
+        cy.get(this.selectorsList().lastNameField).clear().type(lastnamefield)
+        cy.get(this.selectorsList().genericField).eq(2).clear().type(nicknamefield)
 
 
     }
     fillEmployeeDetails(employeeidfield, otheridfield, driverslicensenumber, datefield, ssnnumber, sinnumber) {
 
         
-        cy.get(this.selectorsList().genericField).eq(3).clear().type(userData.myInfoData.employeeidfield)
-        cy.get(this.selectorsList().genericField).eq(4).clear().type(userData.myInfoData.otheridfield)
-        cy.get(this.selectorsList().genericField).eq(5).clear().type(userData.myInfoData.driverslicensenumber)
-        cy.get(this.selectorsList().dateField).eq(0).clear().type(userData.myInfoData.datefield)
+        cy.get(this.selectorsList().genericField).eq(3).clear().type(employeeidfield)
+        cy.get(this.selectorsList().genericField).eq(4).clear().type(otheridfield)
+        cy.get(this.selectorsList().genericField).eq(5).clear().type(driverslicensenumber)
+        cy.get(this.selectorsList().dateField).eq(0).clear().type(datefield)
         cy.get(this.selectorsList().dateButtonClose).click()
-        cy.get(this.selectorsList().genericField).eq(7).clear().type(userData.myInfoData.ssnnumber)
-        cy.get(this.selectorsList().genericField).eq(8).clear().type(userData.myInfoData.sinnumber)
+        cy.get(this.selectorsList().genericField).eq(7).clear().type(ssnnumber)
+        cy.get(this.selectorsList().genericField).eq(8).clear().type(sinnumber)
     }
     fillStatusDetails(birthdatefield, testfield) {
 
@@ -51,11 +51,11 @@ class MyInfoPage {
         cy.get(this.selectorsList().selectFirstCombobox).click()
         cy.get(this.selectorsList().genericComboBox).eq(1).click({force: true })
         cy.get(this.selectorsList().selectSecondCombobox).click()
-        cy.get(this.selectorsList().birthDateField).eq(1).clear().type(userData.myInfoData.birthdatefield)
+        cy.get(this.selectorsList().birthDateField).eq(1).clear().type(birthdatefield)
         cy.get(this.selectorsList().dateButtonClose).click()
         cy.get(this.selectorsList().genericComboBox).eq(2).click({force: true })
         cy.get(this.selectorsList().selectThirdCombobox).click()
-        cy.get(this.selectorsList().genericField).eq(9).clear().type(userData.myInfoData.testfield)
+        cy.get(this.selectorsList().genericField).eq(9).clear().type(testfield)
         
     }
 

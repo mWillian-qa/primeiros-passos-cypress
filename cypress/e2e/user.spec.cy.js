@@ -20,9 +20,9 @@ describe('Orange HRM Tests', () => {
 
     menuPage.accessMyInfo()
     
-    myInfoPage.fillPersonalDetails(userData.myInfoData.firstnamefield, userData.myInfoData.middlenamefield, userData.myInfoData.lastnamefield, userData.myInfoData.nicknamefield)
-    myInfoPage.fillEmployeeDetails(userData.myInfoData.employeeidfield, userData.myInfoData.otheridfield, userData.myInfoData.driverslicensenumber, userData.myInfoData.datefield, userData.myInfoData.ssnnumber, userData.myInfoData.sinnumber)
-    myInfoPage.fillStatusDetails(userData.myInfoData.birthdatefield, userData.myInfoData.testfield)
+    myInfoPage.fillPersonalDetails('First Name', 'Middle Name', 'Last Name', 'Nickname')
+    myInfoPage.fillEmployeeDetails('qaTester', '649731', '12345', '1985-10-18', '54321', '0123456789')
+    myInfoPage.fillStatusDetails('1990-04-15', '321')
     myInfoPage.saveForm()
 
   })
