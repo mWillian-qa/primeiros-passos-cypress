@@ -8,13 +8,16 @@
       "password": "test"
     },
     "myInfoData": {
-      "firtnamefield": "Willian",
+      "firstnamefield": "Willian",
       "lastnamefield": "Ferreira",
       "middlenamefield": "Onofre",
+      "nicknamefield": "mWillian",
       "employeeidfield": "qaTester",
       "otheridfield": "649731",
       "driverslicensenumber": "12345",
       "datefield": "1973-06-20",
+      "ssnnumber": "54321",
+      "sinnumber": "0123456789",
       "testfield": 123,
       "birthdatefield": "1990-04-15"
 
