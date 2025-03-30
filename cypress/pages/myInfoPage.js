@@ -17,6 +17,7 @@ class MyInfoPage {
             selectSecondCombobox: ".oxd-select-dropdown > :nth-child(2)",
             selectThirdCombobox: ".oxd-select-dropdown > :nth-child(6)",
             birthDateField: "[placeholder='yyyy-dd-mm']",
+            genderButton: ".oxd-radio-input--active"
     
         }
 
@@ -53,6 +54,7 @@ class MyInfoPage {
         cy.get(this.selectorsList().selectSecondCombobox).click()
         cy.get(this.selectorsList().birthDateField).eq(1).clear().type(birthdatefield)
         cy.get(this.selectorsList().dateButtonClose).click()
+        cy.get(this.selectorsList().genderButton).eq(0).click()
         cy.get(this.selectorsList().genericComboBox).eq(2).click({force: true })
         cy.get(this.selectorsList().selectThirdCombobox).click()
         cy.get(this.selectorsList().genericField).eq(9).clear().type(testfield)
